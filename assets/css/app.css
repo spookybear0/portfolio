@@ -1,0 +1,41 @@
+body {
+    font-family: Inter, Helvetica Neue, Tahoma, Hiragino Kaku Gothic ProN, Meiryo, Microsoft YaHei, Apple SD Gothic Neo, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+    background-color: #0c0c0c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#header1 {
+    animation: 1s cubic-bezier(0.21, 1.11, 0.81, 0.99) 0s 1 slideInFromLeft;
+}
+
+#header2 {
+    animation: 1s cubic-bezier(0.21, 1.11, 0.81, 0.99) 0s 1 slideInFromRight;
+}
